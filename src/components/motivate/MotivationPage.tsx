@@ -29,11 +29,11 @@ const MotivationPage: React.FC = () => {
         </h2>
         <p className="text-lg font-medium leading-relaxed text-gray-400">
           Motivation is the spark that ignites action and fuels the fire of
-          determination. Whether you're chasing a long-held dream or starting
-          something new, the first step is always the hardest. Surround yourself
-          with positivity, seek inspiration in the stories of others, and trust
-          in your ability to overcome obstacles. Believe in yourself, stay
-          focused, and let your passion guide you toward greatness.
+          determination. Whether you&apos;re chasing a long-held dream or
+          starting something new, the first step is always the hardest. Surround
+          yourself with positivity, seek inspiration in the stories of others,
+          and trust in your ability to overcome obstacles. Believe in yourself,
+          stay focused, and let your passion guide you toward greatness.
         </p>
       </div>
 
@@ -85,8 +85,9 @@ const MotivationPage: React.FC = () => {
                 </p>
                 <p className="font-medium text-sm md:text-base">
                   He graduated from Cornell University College of Architecture
-                  with a bachelor's degree in architecture. He also attended the
-                  Harvard Business School Advanced Management Program in 1975.
+                  with a bachelor&apos;s degree in architecture. He also
+                  attended the Harvard Business School Advanced Management
+                  Program in 1975.
                 </p>
               </div>
             </div>

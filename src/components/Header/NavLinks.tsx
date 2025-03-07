@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import React, { useState } from "react";
-import UploadFile from "../uploadFile";
 
 const NavLinks = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

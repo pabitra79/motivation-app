@@ -1,7 +1,7 @@
 "use client";
-// import MotivationHeader from "@/components/motivate/MotivationHeader";
 import MotivationHeader from "../../../components/motivate/MotivationHeader";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface Person {
   display_name: string;
@@ -116,18 +116,18 @@ const PersonComponent: React.FC = () => {
           {selectedPerson && (
             <>
               <div className="flex items-center space-x-6">
-                <img
+                <Image
                   src={selectedPerson.image}
                   alt={selectedPerson.display_name}
+                  width={150}
+                  height={150}
                   className="w-24 h-24 rounded-full object-cover"
                 />
                 <div>
                   <h2 className="text-2xl font-semibold">
                     {selectedPerson.display_name}
                   </h2>
-                  <p className="text-gray-600 italic">
-                    "{selectedPerson.quote}"
-                  </p>
+                  <p className="text-gray-600 italic">{selectedPerson.quote}</p>
                 </div>
               </div>
               <p className="mt-4 text-gray-700">{selectedPerson.bio.summary}</p>

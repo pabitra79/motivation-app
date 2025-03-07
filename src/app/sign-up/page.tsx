@@ -13,7 +13,6 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { TriangleAlert } from "lucide-react";
 import { signIn } from "next-auth/react";
 import { toast } from "sonner";
 import { Separator } from "@radix-ui/react-dropdown-menu";

@@ -8,6 +8,12 @@ cloudinary.v2.config({
   api_secret: process.env.CLOUDINARY_API_SECRET!,
 });
 
+interface Image {
+  secure_url:string;
+  public_id:string;
+  url:string;
+  
+}
 export async function GET() {
   try {
     // Fetch all images from the root folder
@@ -17,7 +23,7 @@ export async function GET() {
       .max_results(100)
       .execute();
 
-    // console.log("Cloudinary Search Result:", result);
+    
 
     // Check if resources exist
     if (!result.resources || result.resources.length === 0) {
@@ -25,7 +31,7 @@ export async function GET() {
     }
 
     // Map the resources to the required format
-    const images = result.resources.map((image: any) => ({
+    const images = result.resources.map((image: Image) => ({
       url: image.secure_url,
       public_id: image.public_id,
     }));
@@ -37,5 +43,3 @@ export async function GET() {
     return NextResponse.json({ error: "Failed to fetch images" }, { status: 500 });
   }
 }
-// https://res.cloudinary.com/motivate-reel/image/upload/v1740739858/adani_anlrnl.webp
-// https://res.cloudinary.com/motivate-reel/image/upload/v1740804740/adani_vswbqq.webp

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, FormEvent } from "react";
-import AddPersonForm from "@/components/AddPersonForm";
+import AddPersonForm from "../../../components/AddPersonForm";
 
 interface Media {
   url: string;

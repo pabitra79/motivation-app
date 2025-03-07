@@ -21,8 +21,8 @@ const HeroSection: React.FC = () => {
       {/* Text Content Container */}
       <div className="relative text-left p-8 max-w-2xl  rounded-lg shadow-lg ml-8">
         <h1 className="text-2xl md:text-4xl font-bold text-gray-800 animate-textGlow">
-          "The Future Belongs to Those Who Believe in the Beauty of Their
-          Dreams"
+          &quot;The Future Belongs to Those Who Believe in the Beauty of Their
+          Dreams&quot;
         </h1>
         <p className="mt-4 text-xl text-purple-500 font-bold animate-textGlow">
           Keep Pushing Forward, One Step at a Time.

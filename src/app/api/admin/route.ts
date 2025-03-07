@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-// import { connectToDatabase } from "@/lib/mongodb"; // ✅ Ensure Admin DB Connection
 import connectToDatabase from "@/lib/mongodbAdmin"
 import AdminUser from "@/lib/models/adminUser";
 import bcrypt from "bcryptjs";

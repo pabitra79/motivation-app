@@ -1,7 +1,5 @@
-import { error } from "console";
+
 import mongoose from "mongoose";
-import { Monofett } from "next/font/google";
-import { buffer } from "stream/consumers";
 const MONOGODB_URI  = process.env.MONGO as string;
 
 if(!MONOGODB_URI){

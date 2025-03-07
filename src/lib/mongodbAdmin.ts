@@ -2,12 +2,19 @@ import mongoose from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
+interface GlobalWithMongoose {
+  mongoose: {
+    conn: typeof mongoose | null;
+    promise: Promise<typeof mongoose> | null;
+  };
+}
+
 if (!MONGODB_URI) {
   throw new Error("❌ MONGODB_URI is missing in environment variables");
 }
 
 // Global cache to prevent multiple connections
-let cached = (global as any).mongoose || { conn: null, promise: null };
+const cached = (global as unknown as GlobalWithMongoose).mongoose || { conn: null, promise: null };
 
 export default async function connectToAdminDatabase() {
   if (cached.conn) {
@@ -31,6 +38,12 @@ export default async function connectToAdminDatabase() {
       });
   }
 
-  cached.conn = await cached.promise;
+  try {
+    cached.conn = await cached.promise;
+  } catch (err) {
+    cached.promise = null; // Reset the promise if connection fails
+    throw err;
+  }
+
   return cached.conn;
 }

@@ -6,7 +6,14 @@ cloudinary.v2.config({
   api_key: process.env.CLOUDINARY_API_KEY!,
   api_secret: process.env.CLOUDINARY_API_SECRET!,
 });
-
+interface Video {
+  secure_url: string;
+  display_name: string;
+  public_id: string;
+  url: string;
+  duration: number;
+  // Add other properties as needed
+}
 export async function GET() {
   try {
     // Fetch only videos from the "motivate-video" folder
@@ -17,7 +24,7 @@ export async function GET() {
       .execute();
 
 
-    const videos = result.resources.map((video:any) => ({
+    const videos = result.resources.map((video:Video) => ({
       url: video.secure_url,
       public_id: video.public_id,
       display_name: video.display_name,

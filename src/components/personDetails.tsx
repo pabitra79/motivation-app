@@ -16,11 +16,15 @@ const PersonDetails: React.FC<PersonDetailsProps> = ({ personId }) => {
   }
   return (
     <div className="bg-white p-8 rounded-lg shadow-md overflow-y-auto">
-      <h1 className="text-2xl font-bold mb-4">{personData.person}'s Story</h1>
-      <img
+      <h1 className="text-2xl font-bold mb-4">
+        {personData.person}&apos;s Story
+      </h1>
+      <Image
         src={personData.image}
         alt={personData.person}
         className="w-72 h-auto rounded-lg mb-4"
+        height={0}
+        width={0}
       />
 
       {/* Check if bio is a string or an object */}

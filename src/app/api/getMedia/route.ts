@@ -16,10 +16,13 @@ export async function GET() {
       .max_results(100)
       .execute();
 
+
     const videos = result.resources.map((video:any) => ({
       url: video.secure_url,
       public_id: video.public_id,
+      display_name: video.display_name,
     }));
+
 
     return NextResponse.json({ videos });
   } catch (error) {

@@ -1,14 +1,20 @@
-"use client"
-import React,{useState} from "react";
+"use client";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card,CardContent,CardHeader,CardDescription,CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardDescription,
+  CardContent,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {FaGithub} from "react-icons/fa"
-import {FcGoogle} from "react-icons/fc"
+import { FaGithub } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { TriangleAlert } from "lucide-react";
-import {signIn} from 'next-auth/react'
+import { signIn } from "next-auth/react";
 import { toast } from "sonner";
 import { Separator } from "@radix-ui/react-dropdown-menu";
 
@@ -63,18 +69,23 @@ const Signup = () => {
     signIn(value, { callbackUrl: "/" });
   };
 
-return(
-  <div className="min-h-screen flex items-center justify-center bg-[#1b0918]">
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-[#1b0918]">
       <Card className="w-full max-w-md p-6 sm:p-8 bg-slate-300 shadow-md rounded-md">
         <CardHeader>
-          <CardTitle className="text-center text-xl font-semibold text-gray-900">Sign Up</CardTitle>
+          <CardTitle className="text-center text-xl font-semibold text-gray-900">
+            Sign Up
+          </CardTitle>
           <CardDescription className="text-sm text-center text-slate-900">
             Use email or service to create an account
           </CardDescription>
         </CardHeader>
 
         {!!error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6" role="alert">
+          <div
+            className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6"
+            role="alert"
+          >
             <span>{error}</span>
           </div>
         )}
@@ -87,7 +98,9 @@ return(
               disabled={pending}
               placeholder="Full-Name"
               value={form.name}
-              onChange={(e) => setForm({ ...form, [e.target.name]: e.target.value })}
+              onChange={(e) =>
+                setForm({ ...form, [e.target.name]: e.target.value })
+              }
               required
             />
             <Input
@@ -96,7 +109,9 @@ return(
               disabled={pending}
               placeholder="Email"
               value={form.email}
-              onChange={(e) => setForm({ ...form, [e.target.name]: e.target.value })}
+              onChange={(e) =>
+                setForm({ ...form, [e.target.name]: e.target.value })
+              }
               required
             />
             <Input
@@ -105,7 +120,9 @@ return(
               disabled={pending}
               placeholder="Password"
               value={form.password}
-              onChange={(e) => setForm({ ...form, [e.target.name]: e.target.value })}
+              onChange={(e) =>
+                setForm({ ...form, [e.target.name]: e.target.value })
+              }
               required
             />
             <Input
@@ -114,7 +131,9 @@ return(
               disabled={pending}
               placeholder="Confirm Password"
               value={form.confirmpassword}
-              onChange={(e) => setForm({ ...form, [e.target.name]: e.target.value })}
+              onChange={(e) =>
+                setForm({ ...form, [e.target.name]: e.target.value })
+              }
               required
             />
 
@@ -145,7 +164,10 @@ return(
           </div>
           <p className="text-center text-sm mt-2 text-muted-foreground">
             Already Have an Account?
-            <Link className="text-sky-700  font-bold ml-4 hover:underline cursor-pointer" href="/sign-in">
+            <Link
+              className="text-sky-700  font-bold ml-4 hover:underline cursor-pointer"
+              href="/sign-in"
+            >
               Sign In
             </Link>
           </p>

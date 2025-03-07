@@ -1,0 +1,27 @@
+{
+  "name": "Steve Jobs",
+  "image": "https://example.com/steve-jobs.jpg",
+  "quote": "Your time is limited, so don’t waste it living someone else’s life.",
+  "bio": {
+    "summary": "Steve Jobs was one of the founders of Apple Inc., one of the most successful companies in the world.",
+    "sections": [
+      {
+        "type": "heading",
+        "content": "Early Life"
+      },
+      {
+        "type": "paragraph",
+        "content": "Steve Jobs was born on February 24, 1955, in San Francisco, California."
+      },
+      {
+        "type": "list",
+        "content": [
+          "Co-founded Apple in 1976.",
+          "Introduced the Macintosh in 1984.",
+          "Returned to Apple in 1997 and led the company to new heights."
+        ]
+      }
+    ]
+  },
+  "videoId": "https://www.youtube.com/embed/example"
+}

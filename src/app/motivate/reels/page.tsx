@@ -1,6 +1,6 @@
 "use client";
-import MotivationHeader from '@/components/motivate/MotivationHeader';
-import React, { useEffect, useState } from 'react';
+import MotivationHeader from "@/components/motivate/MotivationHeader";
+import React, { useEffect, useState } from "react";
 
 interface Reel {
   url: string;
@@ -41,11 +41,14 @@ export default function ReelPage() {
         {reels.length > 0 ? (
           <div className="w-full max-w-2xl space-y-8 px-4">
             {reels.map((reel) => (
-              <div key={reel.public_id} className="relative group w-full flex justify-center">
+              <div
+                key={reel.public_id}
+                className="relative group w-full flex justify-center"
+              >
                 {/* Video Element */}
                 <div className="rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-300 hover:scale-105 flex justify-center items-center w-full max-w-xs sm:max-w-md md:max-w-lg">
                   <video
-                    className="w-full h-auto"
+                    className="rounded-lg shadow-lg w-full max-h-80"
                     loop
                     onMouseEnter={(e) => e.currentTarget.play()}
                     onMouseLeave={(e) => e.currentTarget.pause()}

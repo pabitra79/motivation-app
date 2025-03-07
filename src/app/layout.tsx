@@ -14,14 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className=""
-      >
+      <body className="">
         <main className="">
-          <Toaster/>
+          <Toaster />
           {children}
-          </main>
-        
+        </main>
       </body>
     </html>
   );

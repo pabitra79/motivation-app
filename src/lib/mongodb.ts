@@ -2,7 +2,7 @@ import { error } from "console";
 import mongoose from "mongoose";
 import { Monofett } from "next/font/google";
 import { buffer } from "stream/consumers";
-const MONOGODB_URI  = process.env.MONGO;
+const MONOGODB_URI  = process.env.MONGO as string;
 
 if(!MONOGODB_URI){
     throw new Error ("please define mongo enviroment variable")
@@ -12,6 +12,10 @@ async function connectToDatabase() {
         if (mongoose.connection.readyState === 1) {
             return mongoose;
         }
+        console.log("⏳ Connecting to MongoDB...");
+    await mongoose.connect(MONOGODB_URI, {
+      dbName: "test", // Optional: specify a database name
+    });
         const opts = {
             bufferCommands: false,
         };

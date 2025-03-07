@@ -15,8 +15,8 @@ const FooterSocial = () => {
               src="/insta.jfif"
               alt="Instagram"
               className="h-5 w-5 ml-24 rounded-full"
-              height={0}
-              width={0}
+              height={100}
+              width={100}
             />
           </Link>
         </div>
@@ -29,8 +29,8 @@ const FooterSocial = () => {
               src="/linked.jfif"
               alt="Linked in"
               className="h-5 w-5 ml-4 rounded-full"
-              height={0}
-              width={0}
+              height={100}
+              width={100}
             />
           </Link>
         </div>

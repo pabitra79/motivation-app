@@ -1,5 +1,5 @@
 "use client";
-import MotivationHeader from "@/components/motivate/MotivationHeader";
+import MotivationHeader from "../../../components/motivate/MotivationHeader";
 import React, { useEffect, useState } from "react";
 
 interface Reel {

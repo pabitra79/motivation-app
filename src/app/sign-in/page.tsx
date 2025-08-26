@@ -1,15 +1,15 @@
 "use client";
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import {
   Card,
   CardHeader,
   CardDescription,
   CardContent,
   CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Input } from "@/components/ui/input";
+} from "../../components/ui/card";
+import { Separator } from "../../components/ui/separator";
+import { Input } from "../../components/ui/input";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
@@ -40,6 +40,7 @@ const Signin = () => {
       const session = await fetch("/api/auth/session").then((res) =>
         res.json()
       );
+
       if (session.user.role === "admin") {
         router.push("/admin/add-person");
         toast.success("Admin login successful!");

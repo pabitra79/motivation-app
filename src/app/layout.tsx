@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
+// import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Motive App",
@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="">
         <main className="">
-          <Toaster />
+          {/* <Toaster /> */}
           {children}
         </main>
       </body>

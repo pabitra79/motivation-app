@@ -47,12 +47,12 @@ const NavLinks = () => {
         >
           About
         </Link>
-        <Link
+        {/* <Link
           href="/login"
           className="block py-2 bg-gradient-to-r from-yellow-700 to bg-gray-500 bg-clip-text text-transparent font-bold text-lg"
         >
           Login
-        </Link>
+        </Link> */}
         {/* <Link
           href="/Upload"
           className="block py-2 bg-gradient-to-r from-yellow-700 to bg-gray-500 bg-clip-text text-transparent font-bold text-lg"
@@ -81,12 +81,12 @@ const NavLinks = () => {
         >
           About
         </Link>
-        <Link
+        {/* <Link
           href="/login"
           className="hover:text-gray-600 bg-gradient-to-r from-yellow-500 to bg-gray-300 bg-clip-text text-transparent font-bold text-lg"
         >
           Login
-        </Link>
+        </Link> */}
         {/* <Link
           href="/Upload"
           className="hover:text-gray-600 bg-gradient-to-r from-yellow-500 to bg-gray-300 bg-clip-text text-transparent font-bold text-lg"
